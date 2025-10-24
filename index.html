@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Siapa itu Revinza?</title>
+<style>
+  :root {
+    --bg: #000;
+    --green: #00ff66;
+    font-family: "Courier New", monospace;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    background: var(--bg);
+    color: var(--green);
+  }
+  .wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+  }
+  h1 {
+    margin: 0 0 20px;
+    font-size: 34px;
+    letter-spacing: 2px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+  .note {
+    margin-top: 18px;
+    color: #9fffc9;
+    font-size: 13px;
+  }
+  button {
+    margin-top: 18px;
+    padding: 8px 12px;
+    border: 1px solid rgba(0,255,102,0.3);
+    background: transparent;
+    color: var(--green);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  button:hover {
+    background: var(--green);
+    color: black;
+  }
+  audio {
+    display: none;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>FREEPALESTINA </h1>
+    <p>
+      Ya Allah, bantulah dan lindungilah rakyat Palestina. Ya Allah, ringankanlah rasa sakit dan penderitaan mereka. Ya Allah, Pemberi Rahmat, limpahkanlah rahmat-Mu kepada merek
+Ya Allah ampunilah kami yg blm mampu berbuat apa-apa
+lindungilah mereka, hilangkan rasa lapar mereka, hangatkan rasa dingin mereka. Hasbunallah wani'mal wakil ni'mal maula wa'nimannassir
+Allahumma sholli ala sayyidina muhammad wa ala ali sayyidina muhammad🤲🇵🇸
+
+#FREEPALESTINA 🇵🇸
+    </p>
+
+    <div class="note">By Revinza</div>
+    <button id="musicBtn" onclick="toggleMusic()">▶ Putar Musik</button>
+    <audio id="song" src="https://daffa-dev.my.id/upload/jsxmz.mp3"></audio>
+  </div>
+
+<script>
+let isPlaying = false;
+function toggleMusic() {
+  const audio = document.getElementById('song');
+  const btn = document.getElementById('musicBtn');
+  if (!isPlaying) {
+    audio.play();
+    isPlaying = true;
+    btn.textContent = "⏸ Hentikan Musik";
+  } else {
+    audio.pause();
+    isPlaying = false;
+    btn.textContent = "▶ Putar Musik";
+  }
+}
+</script>
+</body>
+</html>
